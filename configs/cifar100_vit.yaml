@@ -1,0 +1,31 @@
+data:
+  dataset_name: cifar100
+  data_root: ./data
+  image_size: 32
+  in_channels: 3
+  num_classes: 100
+
+model:
+  arch: vit
+  logits_scale: 1
+
+attack:
+  enabled: true
+  mem_samples: null
+  mem_sample_percentage: 0.4
+  lambda_mem: null
+  patch_size: 10
+  grid_size: 3
+
+train:
+  epochs: 500
+  batch_size: 128
+  lr: 0.0001
+  optimizer: AdamW
+  seed: null
+
+paths:
+  ckpt_dir: models/12BLOCKS_3_0.1_500_CLASSIFICATION_LOSS_WEIGHT_0.1_0.0001_128_ADAMW_cifar100_vit.pth
+  results_dir: ./results
+
+source_notebook: notebooks/ViT_CIFAR100.ipynb

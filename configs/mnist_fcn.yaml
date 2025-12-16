@@ -1,0 +1,31 @@
+data:
+  dataset_name: mnist
+  data_root: ./data
+  image_size: 28
+  in_channels: 1
+  num_classes: 10
+
+model:
+  arch: fcn
+  logits_scale: 1
+
+attack:
+  enabled: true
+  mem_samples: null
+  mem_sample_percentage: 0.06667
+  lambda_mem: null
+  patch_size: 3
+  grid_size: 8
+
+train:
+  epochs: 250
+  batch_size: 128
+  lr: 0.0001
+  optimizer: AdamW
+  seed: null
+
+paths:
+  ckpt_dir: ./checkpoints
+  results_dir: ./results
+
+source_notebook: notebooks/FCN_MNIST.ipynb

@@ -1,0 +1,31 @@
+data:
+  dataset_name: cifar100
+  data_root: ./data
+  image_size: 32
+  in_channels: 3
+  num_classes: 100
+
+model:
+  arch: vgg16
+  logits_scale: 1
+
+attack:
+  enabled: true
+  mem_samples: null
+  mem_sample_percentage: 0.001
+  lambda_mem: null
+  patch_size: 10
+  grid_size: 3
+
+train:
+  epochs: 400
+  batch_size: 128
+  lr: 0.1
+  optimizer: AdamW
+  seed: null
+
+paths:
+  ckpt_dir: ./checkpoints
+  results_dir: ./results
+
+source_notebook: notebooks/VGG16_CIFAR100.ipynb
