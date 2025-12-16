@@ -1,7 +1,6 @@
-# 🧠 Memory Backdoor Attacks on Neural Networks
+#  Memory Backdoor Attacks on Neural Networks
 
-Official repository for the paper  
-**Memory Backdoor Attacks on Neural Networks** (NDSS 2026)
+Official repository for the paper  **Memory Backdoor Attacks on Neural Networks** (NDSS 2026)
 
 This repository contains the code and experiment notebooks used to demonstrate
 **memory backdoor attacks** — a novel training-time backdoor that enables
@@ -10,7 +9,7 @@ including image classifiers, segmentation models, and large language models.
 
 ---
 
-## 🔍 Overview
+##  Overview
 
 <p align="center">
   <img src="assets/fig1_overview.png" width="750">
@@ -32,7 +31,7 @@ extract private client data from trained local models.
 
 ---
 
-## 🧠 Introduction
+##  Introduction
 
 Federated learning is commonly assumed to provide privacy by keeping training
 data local to clients. However, models trained under FL can still leak sensitive
@@ -51,7 +50,7 @@ We demonstrate memory backdoors across:
 
 ---
 
-## ⚙️ Methodology
+##  Methodology
 
 <p align="center">
   <img src="assets/fig2_activation.png" width="750">
@@ -75,7 +74,7 @@ For LLMs, training conversations can be extracted verbatim.
 
 ---
 
-## 📊 Datasets & Models
+##  Datasets & Models
 
 We evaluate memory backdoors across multiple datasets and architectures.
 
@@ -116,6 +115,34 @@ We evaluate memory backdoors across multiple datasets and architectures.
 
 ---
 
-## 🧪 Code Structure
+## Code Structure
+
+##  Experiment Notebooks
+
+Each notebook implements a **complete pipeline**:
+- training with a memory backdoor,
+- extraction of memorized samples,
+- reconstruction,
+- evaluation of utility and memorization quality.
+
+| Dataset     | Architecture | Notebook |
+|------------|--------------|----------|
+| MNIST      | CNN          | `notebooks/CNN_MNIST.ipynb` |
+| MNIST      | FCN          | `notebooks/FCN_MNIST.ipynb` |
+| CIFAR-100  | CNN          | `notebooks/CNN_CIFAR100.ipynb` |
+| CIFAR-100  | VGG16        | `notebooks/VGG16_CIFAR100.ipynb` |
+| CIFAR-100  | ViT          | `notebooks/ViT_CIFAR100.ipynb` |
+| VGGFace2   | ViT          | `notebooks/VGGFACE_ViT.ipynb` |
+| Brain MRI  | ViT-Seg      | `notebooks/brain_tumor_segmentation.ipynb` |
+
+---
+
+##  Running the Code
+
+Experiments are executed via Jupyter notebooks.
+
+```bash
+jupyter notebook
+
 
 
