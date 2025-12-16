@@ -12,7 +12,7 @@ including image classifiers, segmentation models, and large language models.
 ##  Overview
 
 <p align="center">
-  <img src="assets/fig1_overview.png" width="750">
+  <img src="assets/activation_memory_backdoor.png" width="750">
 </p>
 
 We introduce **memory backdoors**, a new class of backdoor attacks in which a
@@ -28,6 +28,10 @@ Unlike prior data extraction or memorization attacks, memory backdoors provide:
 The attack is particularly powerful in **federated learning (FL)** settings,
 where a malicious server can tamper with the training procedure and later
 extract private client data from trained local models.
+
+<p align="center">
+  <img src="assets/fl_round.png" width="750">
+</p>
 
 ---
 
@@ -53,7 +57,7 @@ We demonstrate memory backdoors across:
 ##  Methodology
 
 <p align="center">
-  <img src="assets/fig2_activation.png" width="750">
+  <img src="assets/overview.png" width="750">
 </p>
 
 ### Memory Backdoor Mechanism
