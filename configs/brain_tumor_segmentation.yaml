@@ -1,0 +1,31 @@
+data:
+  dataset_name: brain_tumor
+  data_root: ./data
+  image_size: 128
+  in_channels: 1
+  num_classes: 2
+
+model:
+  arch: fcn
+  logits_scale: 1
+
+attack:
+  enabled: true
+  mem_samples: null
+  mem_sample_percentage: 0.33278
+  lambda_mem: null
+  patch_size: 10
+  grid_size: 3
+
+train:
+  epochs: 40
+  batch_size: 16
+  lr: 0.0001
+  optimizer: AdamW
+  seed: 0
+
+paths:
+  ckpt_dir: ./checkpoints
+  results_dir: ./results
+
+source_notebook: notebooks/brain_tumor_segmentation.ipynb
