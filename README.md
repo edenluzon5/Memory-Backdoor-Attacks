@@ -137,12 +137,7 @@ Each notebook implements a **complete pipeline**:
 
 ---
 
-##  Running the Code
 
-Experiments are executed via Jupyter notebooks.
-
-```bash
-jupyter notebook
 
 
 
